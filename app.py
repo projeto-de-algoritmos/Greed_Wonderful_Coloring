@@ -27,8 +27,24 @@ class Sequence(Resource):
     def delete(self):
         redis.delete('sequence')
 
+class Colors(Resource):
+    def get(self):
+        return jsonify({"colors":  list(map(lambda x: x.decode('utf-8'), 
+        redis.lrange('colors', 0, -1)))})
+
+    def post(self):
+        data = request.get_json()
+        colors = data['colors']
+        for c in colors:
+            redis.rpush('colors', c)
+        return data
+    
+    def delete(self):
+        redis.delete('colors')
+
 
 api.add_resource(Sequence, '/sequence')
+api.add_resource(Colors, '/colors')
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
