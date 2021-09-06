@@ -58,7 +58,7 @@ Se você não tiver Docker, lamentamos, terá que instalar os pacotes:
 
 E precisará também instalar o Redis:
 
-    - [Redis](https://redis.io/download)
+- [Redis](https://redis.io/download)
 
 Execute a API com o seguinte comando:
 
