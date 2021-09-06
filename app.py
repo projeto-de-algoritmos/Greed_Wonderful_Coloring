@@ -16,7 +16,6 @@ class Sequence(Resource):
         data = request.get_json()
         sequence = data['sequence']
         for e in sequence:
-            print(e)
             redis.rpush('sequence', e)
         return data
 
@@ -48,7 +47,6 @@ class Wonderful(Resource):
             return "Sequence is empty", 404
         
         if len(colors) == 0:
-            print("colors is empty")
             return "Colors is empty", 404
 
         res = get_wonderful_colors(sequence, colors)
