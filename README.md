@@ -1,4 +1,4 @@
-# WonderfulColoring
+# Wonderful Coloring
 
 **Número da Lista**: 20<br>
 **Conteúdo da Disciplina**: Greed<br>
