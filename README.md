@@ -63,3 +63,7 @@ E precisará também instalar o Redis:
 Execute a API com o seguinte comando:
 
 `python3 app.py` ou `flask run`
+
+## Vídeo
+
+O vídeo está disponível na pasta assets.
